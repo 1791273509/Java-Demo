@@ -11,6 +11,7 @@ public class ShouXieThreadPool {
 		ExecutorService pool = new ThreadPoolExecutor(2, 
 				5, 1L, TimeUnit.SECONDS, new LinkedBlockingDeque<>(3),
 				Executors.defaultThreadFactory(),
+				
 				new ThreadPoolExecutor.DiscardPolicy());
 		
 		try {
